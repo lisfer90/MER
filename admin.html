@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - MER y ENGA</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Agregar Producto</h2>
+        <form action="agregar_producto.html" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nombre" placeholder="Nombre del Producto" required>
+            <input type="text" name="descripcion" placeholder="Descripción" required>
+            <input type="number" name="precio" placeholder="Precio" required>
+            <input type="file" name="imagen" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+
+</body>
+</html>
