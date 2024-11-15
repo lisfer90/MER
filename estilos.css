@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #111;
+}
+
+/* Encabezado y Navegación */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para header */
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px; /* Se aumenta la separación entre los botones */
+    align-items: center;
+}
+
+header .boton {
+    background-color: #ffcc00;
+    color: #111;
+    padding: 15px 30px; /* Aumentamos el tamaño de los botones */
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5em; /* Se aumenta el tamaño del texto */
+    transition: background-color 0.3s;
+}
+
+header .boton:hover {
+    background-color: #ffaa00;
+}
+
+/* Estilo de bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 150px 20px;  /* Aseguramos suficiente espacio para el título */
+    background-color: #111;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-bienvenida {
+    font-size: 6em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease;
+    word-wrap: break-word;  /* Asegura que el texto se ajuste */
+    max-width: 100%;  /* Maximiza el tamaño del título */
+    margin: 0 auto;
+}
+
+.descripcion {
+    font-size: 2.5em;
+    color: #d1d1d1;
+    line-height: 1.8;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    z-index: 1; /* Asegura que el carrusel quede por debajo del título */
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite;
+}
+
+.carousel-images img {
+    width: 100vw;
+    height: 70vh;  /* Ajuste para una visualización apropiada */
+    object-fit: cover;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100vw); }
+    66% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.redes-sociales a {
+    color: #ffffff;
+    font-size: 4em;  /* Aumentamos el tamaño de los íconos */
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #ffaa00;
+    transform: scale(1.2);
+}
+
+/* Animaciones de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .boton {
+        font-size: 1.5em;
+        padding: 15px 25px;
+    }
+    .titulo-bienvenida {
+        font-size: 4.5em; /* Ajustamos el tamaño del título en pantallas pequeñas */
+    }
+    .descripcion {
+        font-size: 2em;
+    }
+    .carousel-images img {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-bienvenida {
+        font-size: 4em; /* Aseguramos que en pantallas muy pequeñas el título no quede tan grande */
+    }
+    .descripcion {
+        font-size: 1.6em;
+    }
+    .carousel-images img {
+        height: 50vh;
+    }
+}
