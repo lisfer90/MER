@@ -79,7 +79,7 @@ header .boton:hover {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    margin-top: 4;
     z-index: 1; /* Asegura que el carrusel quede por debajo del título */
 }
 
