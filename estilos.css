@@ -74,26 +74,15 @@ header .boton:hover {
 }
 
 /* Carrusel de imágenes */
-.carousel {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    margin-top: 4;
-    z-index: 1; /* Asegura que el carrusel quede por debajo del título */
-}
+   .carousel-container {
+      margin-top: 20px;
+    }
 
-.carousel-images {
-    display: flex;
-    width: 300%;
-    animation: slide 10s infinite;
-}
-
-.carousel-images img {
-    width: 100vw;
-    height: 70vh;  /* Ajuste para una visualización apropiada */
-    object-fit: cover;
-}
+    .carousel-item img {
+      width: 100%;
+      height: 80vh; /* Altura ajustada */
+      object-fit: cover; /* Se adapta al tamaño */
+    }
 
 /* Animación del carrusel */
 @keyframes slide {
