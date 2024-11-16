@@ -7,29 +7,29 @@ body {
 }
 
 header {
-  position: relative;
   text-align: center;
-  padding-top: 60px; /* Espacio para botones superiores */
+  padding-top: 80px;
+  position: relative;
 }
 
 h1.welcome {
   color: yellow;
-  font-size: 3.5vw; /* Ajusta el tamaño según la pantalla */
+  font-size: 4vw; /* Más grande y responsivo */
   text-shadow: 2px 2px 5px black;
   margin: 10px 0;
 }
 
 .buttons-container {
   position: absolute;
-  top: 20px; /* Posición fija arriba */
-  right: 20px; /* Ajusta desde la derecha */
+  top: 20px; /* Espacio superior */
+  right: 20px; /* Espacio desde la derecha */
   display: flex;
   gap: 10px;
 }
 
 .btn-custom {
-  padding: 10px 15px;
-  font-size: 1rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
   border-radius: 5px;
   background-color: orange;
   border: none;
@@ -44,20 +44,21 @@ h1.welcome {
 }
 
 .carousel-container {
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .carousel-item img {
   width: 100%;
-  height: 80vh; /* Altura ajustada */
-  object-fit: cover; /* Se adapta al tamaño */
+  height: 80vh; /* Imagen más grande */
+  object-fit: cover; /* Evita recortes */
 }
 
 .intro-paragraph {
-  text-align: justify;
+  text-align: center;
   margin: 20px auto;
-  width: 90%;
-  font-size: 1.8rem;
+  width: 80%;
+  font-size: 1.8rem; /* Letra más grande */
+  color: white;
 }
 
 .social-icons {
