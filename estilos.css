@@ -1,41 +1,17 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
+.intro-paragraph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
-h1.welcome {
+.intro-paragraph {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
   color: #FFD700;
-  text-shadow: 2px 2px 5px #000;
-}
-
-.carousel-container img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
-.buttons-container .btn-custom {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #FFD700;
-  color: #000;
-  text-decoration: none;
+  text-shadow: 1px 1px 3px #000;
   font-weight: bold;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #FFD700;
-}
-
-.form-control {
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #FFD700;
+  max-width: 80%;
+  margin: 0 auto;
 }
