@@ -49,8 +49,8 @@ h1.welcome {
 
 .carousel-item img {
   width: 100%;
-  height: 80vh; /* Imagen más grande */
-  object-fit: cover; /* Evita recortes */
+  height: 80vh;
+  object-fit: cover;
 }
 
 .intro-paragraph {
