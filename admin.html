@@ -1,0 +1,37 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="admin-container">
+    <h1>Bienvenido al Panel de Administración</h1>
+
+    <h2>Agregar Producto</h2>
+    <form id="add-product-form">
+      <label for="product-name">Nombre del Producto:</label>
+      <input type="text" id="product-name" name="product-name" required>
+
+      <label for="product-price">Precio:</label>
+      <input type="number" id="product-price" name="product-price" required>
+
+      <label for="product-image">Imagen (URL):</label>
+      <input type="text" id="product-image" name="product-image" required>
+
+      <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h2>Productos en el Catálogo</h2>
+    <ul id="product-list">
+      <!-- Aquí se mostrarán los productos -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
