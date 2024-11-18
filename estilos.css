@@ -47,3 +47,10 @@ button, a.btn-custom {
     font-size: 0.9rem;
   }
 }
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Ajusta según necesidad */
+  object-fit: cover;
+}
+
