@@ -17,120 +17,59 @@ body {
 
 
 /* Estilo para el párrafo de bienvenida */
-/* Contenedor principal */
+/* Sección de bienvenida con mosaico */
 .welcome-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #000, #333, #000); /* Fondo elegante */
-  padding: 40px;
-}
-
-/* Texto de bienvenida */
-.welcome-text-container {
-  max-width: 600px;
-  margin: 20px;
-  text-align: center;
-}
-
-.welcome-title {
-  font-size: 2.5rem;
-  color: #ffc107;
-  margin-bottom: 20px;
-}
-
-.welcome-text {
-  font-size: 1.5rem;
-  color: white;
-  line-height: 1.8;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #000, #333, #000);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
-}
-
-.gallery-section h2 {
-    font-size: 2rem;
-    color: #ffcc00;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000, #ffcc00);
+    color: #fff;
     padding: 20px;
 }
 
-.gallery-image {
-    width: 100%;
-    border: 3px solid #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+.welcome-text {
+    flex: 1;
+    max-width: 45%;
+    padding: 20px;
+    text-align: center;
 }
 
-.gallery-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.welcome-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
 }
 
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 10;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
+.welcome-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-mosaic {
+    flex: 1;
+    max-width: 50%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal-content {
-    display: block;
-    margin: auto;
-    max-width: 80%;
+.carousel img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-/* Carrusel */
-.carousel-inner img {
-  height: 70vh; /* Mantén la altura ajustada */
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  object-fit: contain; /* Muestra la imagen completa sin recortes */
-  background-color: #000; /* Fondo negro para un diseño más elegante */
-  border-radius: 10px; /* Bordes ligeramente redondeados */
-}
-
-/* Contenedor del carrusel */
-.carousel {
-  margin: 10px auto; /* Centra el carrusel */
-  max-width: 90%; /* Ajusta el ancho total a un 90% de la pantalla */
-}
-
-/* Botones de navegación */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo más visible */
-  border-radius: 50%; /* Forma circular */
-  width: 40px;
-  height: 40px;
+    background-color: rgba(255, 204, 0, 0.8);
+    border-radius: 50%;
 }
+
+.carousel-indicators button {
+    background-color: #ffcc00;
+}
+
 
 
 /* Estilo de los iconos de redes sociales */
