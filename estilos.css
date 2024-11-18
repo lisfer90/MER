@@ -7,6 +7,7 @@ body {
 
 /* Encabezado */
 /* Ajustes generales de la sección de bienvenida */
+/* Sección de bienvenida */
 .welcome-section {
     display: flex;
     flex-wrap: nowrap;
@@ -14,58 +15,48 @@ body {
     justify-content: space-between;
     background: linear-gradient(135deg, #000000, #ffcc00);
     color: #fff;
-    height: 90vh; /* Menor altura para dejar espacio al contenido posterior */
+    height: 60vh; /* Altura reducida */
     padding: 20px;
-    gap: 10px; /* Espacio entre el párrafo y el carrusel */
+    gap: 10px; /* Espaciado entre el texto y el carrusel */
 }
 
 .welcome-text {
     flex: 1;
-    max-width: 45%; /* Aumenta el ancho del texto */
+    max-width: 45%; /* Menor ancho del texto */
     padding: 20px;
-    text-align: justify; /* Mejor alineación para párrafos largos */
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .welcome-title {
-    font-size: 2.8rem; /* Tamaño elegante y no tan abrumador */
+    font-size: 2.5rem; /* Ajustado para no ser tan grande */
     font-family: 'Playfair Display', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .welcome-paragraph {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Tamaño menor pero aún legible */
     line-height: 1.6;
     font-family: 'Arial', sans-serif;
-    margin-top: 15px;
 }
 
 .carousel-mosaic {
     flex: 1;
-    max-width: 50%; /* Ajusta el ancho del carrusel */
-    height: 85%; /* Reduce la altura para equilibrar con el texto */
+    max-width: 50%; /* Igual proporción con el texto */
+    height: 100%; /* Se adapta a la altura del texto */
+    display: flex;
+    align-items: center;
 }
 
 .carousel img {
     width: 100%;
-    height: 100%; /* Se ajusta al nuevo contenedor */
-    object-fit: cover; /* Muestra la imagen completa sin distorsión */
+    height: 100%;
+    object-fit: cover; /* Muestra toda la imagen sin distorsión */
     border-radius: 10px;
 }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(255, 204, 0, 0.8);
-    border-radius: 50%;
-}
-
-.carousel-indicators button {
-    background-color: #ffcc00;
-}
-
 
 /* Estilo de los iconos de redes sociales */
 .social-icons {
