@@ -39,32 +39,40 @@
 
   <!-- Encabezado con carrusel -->
   <header>
-<!-- Sección de bienvenida con imágenes interactivas -->
 <section class="welcome-section">
-  <div class="welcome-text-container">
-    <h1 class="welcome-title">¡Bienvenidos a MER Soluciones Innovadoras!</h1>
-    <p class="welcome-text">
-      Donde los sueños se construyen con precisión y creatividad.
-      En MER Innovar Solution, nos especializamos en transformar ideas en realidad, construyendo espacios que inspiran. 
-      Desde diseño hasta sistemas eléctricos, garantizamos ambientes funcionales y hermosos. ¡Construimos tus sueños, iluminamos tu futuro!
-    </p>
- <section class="gallery-section">
-    <h2 class="text-center mt-5">Explora Nuestros Proyectos</h2>
-    <div class="gallery">
-        <img src="imagen1.jpg" alt="Proyecto 1" class="gallery-image">
-        <img src="imagen2.jpg" alt="Proyecto 2" class="gallery-image">
-        <img src="imagen3.jpg" alt="Proyecto 3" class="gallery-image">
-        <img src="imagen4.jpg" alt="Proyecto 4" class="gallery-image">
-        <img src="imagen5.jpg" alt="Proyecto 5" class="gallery-image">
-        <img src="imagen6.jpg" alt="Proyecto 6" class="gallery-image">
+    <div class="welcome-text">
+        <h1 class="welcome-title">¡Bienvenidos a MER Soluciones Innovadoras!</h1>
+        <p class="welcome-paragraph">
+            Donde los sueños se construyen con precisión y creatividad.
+            En MER Innovar Solution, transformamos ideas en realidad, fusionando innovación con tradición para diseñar y construir espacios únicos que inspiran. Explora un mundo donde construimos tus sueños e iluminamos tu futuro.
+        </p>
     </div>
-    <!-- Modal para imágenes ampliadas -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+    <div class="carousel-mosaic">
+        <div id="mosaicCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagen1.jpg" class="d-block w-100" alt="Proyecto 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagen2.jpg" class="d-block w-100" alt="Proyecto 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagen3.jpg" class="d-block w-100" alt="Proyecto 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagen4.jpg" class="d-block w-100" alt="Proyecto 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mosaicCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mosaicCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-</section>
-
 </section>
 
   <!-- Redes sociales -->
