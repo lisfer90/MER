@@ -20,10 +20,26 @@ body {
 
 /* Carrusel */
 .carousel-inner img {
-  height: 300px; /* Ajustamos la altura a 300px */
-  object-fit: cover; /* Las imágenes se ajustan pero no pierden calidad */
-  width: 100%; /* Abarcan todo el ancho del carrusel */
+  height: 50vh; /* Altura proporcional al viewport, ocupa la mitad de la pantalla */
+  object-fit: cover; /* Ajusta las imágenes sin deformarlas */
+  width: 100%; /* Abarca todo el ancho */
+  border-radius: 5px; /* Opcional: bordes ligeramente redondeados */
 }
+
+/* Contenedor del carrusel */
+.carousel {
+  margin: 20px auto; /* Espaciado alrededor del carrusel */
+}
+
+/* Botones del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border-radius: 50%; /* Forma circular */
+  width: 40px;
+  height: 40px;
+}
+
 
 
 /* Redes sociales */
