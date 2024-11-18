@@ -20,9 +20,11 @@ body {
 
 /* Carrusel */
 .carousel-inner img {
-  height: 450px; /* Ajusta la altura para que sea más pequeña */
-  object-fit: contain; /* Evita que se recorte */
+  height: 300px; /* Ajustamos la altura a 300px */
+  object-fit: cover; /* Las imágenes se ajustan pero no pierden calidad */
+  width: 100%; /* Abarcan todo el ancho del carrusel */
 }
+
 
 /* Redes sociales */
 .social-icons a {
