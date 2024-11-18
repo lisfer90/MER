@@ -44,3 +44,25 @@ function changePassword() {
 
 // Mostrar opción para cambiar la contraseña en el panel de administración
 document.getElementById('change-password').addEventListener('click', changePassword);
+
+// Código previo para otras funcionalidades
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Página cargada correctamente.");
+});
+
+// Código para la galería interactiva
+const galleryImages = document.querySelectorAll(".gallery-image");
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+
+galleryImages.forEach((image) => {
+    image.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImage.src = image.src;
+    });
+});
+
+modal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
