@@ -20,18 +20,20 @@ body {
 
 /* Carrusel */
 .carousel-inner img {
-  height: 50vh; /* Altura proporcional al viewport, ocupa la mitad de la pantalla */
-  object-fit: cover; /* Ajusta las imágenes sin deformarlas */
-  width: 100%; /* Abarca todo el ancho */
-  border-radius: 5px; /* Opcional: bordes ligeramente redondeados */
+  height: 70vh; /* Ocupará el 70% del alto de la pantalla */
+  object-fit: contain; /* Ajusta la imagen completa sin recortar */
+  width: 100%; /* Ancho total de la pantalla */
+  background-color: #000; /* Fondo negro para imágenes más pequeñas */
+  border-radius: 8px; /* Bordes redondeados suaves */
 }
 
 /* Contenedor del carrusel */
 .carousel {
-  margin: 20px auto; /* Espaciado alrededor del carrusel */
+  margin: 10px auto; /* Espaciado superior e inferior */
+  max-width: 100%; /* No supera el ancho de la pantalla */
 }
 
-/* Botones del carrusel */
+/* Botones de navegación */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
@@ -39,8 +41,6 @@ body {
   width: 40px;
   height: 40px;
 }
-
-
 
 /* Redes sociales */
 .social-icons a {
