@@ -16,47 +16,51 @@ body {
 }
 
 
-/* Estilo para el párrafo de bienvenida */
 /* Sección de bienvenida con mosaico */
 .welcome-section {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap; /* No permite que los elementos se muevan a la siguiente fila */
+    align-items: stretch; /* Los elementos se estiran uniformemente en altura */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
     background: linear-gradient(135deg, #000000, #ffcc00);
     color: #fff;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
     padding: 20px;
 }
 
 .welcome-text {
     flex: 1;
-    max-width: 45%;
+    max-width: 40%; /* Ocupa el 40% del ancho total */
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
 }
 
 .welcome-title {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Aumenta el tamaño del título */
     font-family: 'Playfair Display', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 15px;
 }
 
 .welcome-paragraph {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 1.8;
     font-family: 'Arial', sans-serif;
+    margin-top: 10px;
 }
 
 .carousel-mosaic {
     flex: 1;
-    max-width: 50%;
-    height: 100%;
+    max-width: 55%; /* Ocupa el 55% del ancho total */
+    height: 100%; /* Ocupa todo el alto de la sección */
 }
 
 .carousel img {
-    height: 300px;
-    object-fit: cover;
+    height: 100%; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Las imágenes se ajustan sin perder proporciones */
     border-radius: 8px;
 }
 
@@ -69,7 +73,6 @@ body {
 .carousel-indicators button {
     background-color: #ffcc00;
 }
-
 
 
 /* Estilo de los iconos de redes sociales */
