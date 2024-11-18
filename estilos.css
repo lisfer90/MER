@@ -19,41 +19,12 @@ body {
 }
 
 /* Carrusel */
-.carousel-images img {
-    width: 100vw;
-    height: 70vh;  /* Ajuste para una visualización apropiada */
-    object-fit: cover;
-}
-
-/* Barra de navegación */
-.navbar {
-  margin-bottom: 20px;
-}
-
-.nav-link {
-  color: #FFD700;
-  font-size: 1rem;
-}
-
-.nav-link:hover {
-  color: #fff;
-}
-
-.btn-outline-warning {
-  color: #FFD700;
-  border-color: #FFD700;
-}
-
-.btn-outline-warning:hover {
-  background-color: #FFD700;
-  color: #000;
+.carousel-inner img {
+  height: 450px; /* Ajusta la altura para que sea más pequeña */
+  object-fit: contain; /* Evita que se recorte */
 }
 
 /* Redes sociales */
-.social-icons {
-  margin-top: 20px;
-}
-
 .social-icons a {
   color: #FFD700;
   font-size: 1.5rem;
@@ -63,19 +34,4 @@ body {
 
 .social-icons a:hover {
   color: #fff;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .welcome {
-    font-size: 1.8rem;
-  }
-
-  .intro-text {
-    font-size: 1rem;
-  }
-
-  .nav-link {
-    font-size: 0.9rem;
-  }
 }
