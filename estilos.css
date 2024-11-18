@@ -7,11 +7,14 @@ body {
 
 /* Encabezado */
 .welcome {
-  color: #FFD700; /* Amarillo dorado */
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 0;
+    font-size: 3rem; /* Tamaño más grande */
+    font-family: 'Playfair Display', serif; /* Estilo elegante */
+    color: #ffcc00; /* Amarillo dorado */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra sutil */
+    text-align: center;
+    margin-top: 20px;
 }
+
 
 /* Estilo para el párrafo de bienvenida */
 /* Contenedor principal */
@@ -48,54 +51,62 @@ body {
   box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
 }
 
-/* Galería de imágenes */
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 1000px;
+.gallery-section h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.gallery-item {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
 }
 
-.gallery-item:hover {
-  transform: scale(1.1); /* Zoom al pasar el ratón */
-  box-shadow: 0 6px 12px rgba(255, 193, 7, 0.7); /* Sombra dorada */
+.gallery-image {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Modal para imagen ampliada */
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    display: none; 
+    position: fixed;
+    z-index: 10;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.7);
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
 }
 
-.modal.show {
-  display: flex;
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
 
 /* Carrusel */
 .carousel-inner img {
