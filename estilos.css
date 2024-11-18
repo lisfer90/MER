@@ -1,56 +1,60 @@
-/* Asegura que todo sea responsive */
+/* Colores generales */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
 }
 
 header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
-  padding: 1em;
 }
 
-h1, h2, h3, h4 {
-  font-weight: bold;
+h1, h2 {
+  color: #FFD700; /* Amarillo dorado */
+  text-transform: uppercase;
 }
 
-p {
+p, label {
   font-size: 1.2rem;
+  color: #fff;
 }
 
-button, a.btn-custom {
-  padding: 10px 20px;
-  font-size: 1rem;
+input, button {
   border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+}
+
+/* Estilo de tarjetas */
+.card {
+  background-color: #333;
+  border: 1px solid #FFD700;
 }
 
 .card-title {
-  font-size: 1.2rem;
+  color: #FFD700;
 }
 
-/* Mobile */
+/* Responsividad */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
-  p {
+  p, label {
     font-size: 1rem;
   }
 
-  button, a.btn-custom {
+  input, button {
     font-size: 0.9rem;
   }
 }
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-  max-height: 500px; /* Ajusta según necesidad */
-  object-fit: cover;
-}
-
