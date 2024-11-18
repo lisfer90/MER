@@ -1,80 +1,49 @@
-/* styles.css */
+/* Asegura que todo sea responsive */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-.navbar-container {
-  background-color: #333;
-  padding: 10px;
+header, footer {
   text-align: center;
+  padding: 1em;
 }
 
-.navbar-link {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
+h1, h2, h3, h4 {
   font-weight: bold;
 }
 
-.navbar-link:hover {
-  color: #ff9900;
+p {
+  font-size: 1.2rem;
 }
 
-.carousel-inner img {
-  max-height: 500px;
-  object-fit: cover;
+button, a.btn-custom {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
-.welcome-text {
-  text-align: center;
-  padding: 20px;
-}
-
-h1, h2 {
-  font-size: 2rem;
-}
-
-input, button {
-  padding: 10px;
-  margin: 10px;
+.card img {
   width: 100%;
-  box-sizing: border-box;
+  height: auto;
 }
 
-button {
-  background-color: #333;
-  color: white;
-  cursor: pointer;
+.card-title {
+  font-size: 1.2rem;
 }
 
-button:hover {
-  background-color: #ff9900;
-}
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-.login-container, .admin-container, .catalog-container {
-  margin: 20px;
-}
+  p {
+    font-size: 1rem;
+  }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-}
-
-.catalog-container ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.catalog-container li {
-  flex: 1 1 200px;
-  margin: 10px;
+  button, a.btn-custom {
+    font-size: 0.9rem;
+  }
 }
