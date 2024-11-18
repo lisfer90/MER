@@ -23,6 +23,11 @@ body {
   height: 500px; /* Ajusta la altura para que no sea muy grande */
   object-fit: cover;
 }
+.carousel-images img {
+    width: 100vw;
+    height: 70vh;  /* Ajuste para una visualización apropiada */
+    object-fit: cover;
+}
 
 /* Barra de navegación */
 .navbar {
