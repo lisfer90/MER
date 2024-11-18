@@ -14,30 +14,57 @@ body {
 }
 
 /* Estilo para el párrafo de bienvenida */
+/* Estilo para el párrafo de bienvenida */
 .welcome-text {
-  font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  font-size: 2rem; /* Texto más grande */
   font-family: 'Roboto', sans-serif; /* Elegante y fácil de leer */
   text-align: center;
-  padding: 20px;
-  background-color: #fff; /* Fondo blanco para resaltar el texto */
-  color: #333; /* Color de texto gris oscuro */
+  padding: 30px;
+  background: linear-gradient(135deg, #000, #333, #000); /* Degradado elegante */
+  color: #ffc107; /* Color dorado */
   line-height: 1.8; /* Mejora la legibilidad */
-  max-width: 800px; /* Limita el ancho del texto */
+  max-width: 1000px; /* Limita el ancho del texto */
   margin: 20px auto; /* Centra el párrafo y agrega un margen */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5); /* Sombra que combina con el dorado */
 }
 
 @media (max-width: 768px) {
   .welcome-text {
-    font-size: 1.2rem; /* Ajusta el tamaño en pantallas pequeñas */
+    font-size: 1.5rem; /* Ajusta el tamaño en pantallas pequeñas */
   }
 }
 
 @media (max-width: 576px) {
   .welcome-text {
-    font-size: 1rem; /* Ajusta aún más el tamaño en pantallas muy pequeñas */
+    font-size: 1.2rem; /* Ajusta aún más el tamaño en pantallas muy pequeñas */
   }
+}
+
+/* Galería */
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #000; /* Fondo negro */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1); /* Zoom al pasar el ratón */
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.7); /* Sombra al pasar el ratón */
 }
 
 
