@@ -43,19 +43,66 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.carousel-mosaic {
-    flex: 1;
-    max-width: 50%; /* Igual proporción con el texto */
-    height: 100%; /* Se adapta a la altura del texto */
-    display: flex;
-    align-items: center;
+/* Carrusel Estilizado */
+.carousel {
+  height: 60vh; /* Altura del carrusel ajustada */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Esquinas redondeadas */
 }
 
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Muestra toda la imagen sin distorsión */
-    border-radius: 10px;
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-image {
+  height: 100%;
+  object-fit: cover; /* Mantiene proporción de las imágenes */
+  filter: brightness(0.9); /* Oscurece ligeramente las imágenes */
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  transform: scale(0.9); /* Tamaño más pequeño para el próximo frame */
+}
+
+.carousel-item.active {
+  transform: scale(1); /* Imagen principal más grande */
+}
+
+/* Efecto geométrico al pasar de imagen */
+.carousel-inner .carousel-item {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Geometría predeterminada */
+}
+
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 20% 100%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Iconos blancos */
+}
+
+/* Carrusel responsivo */
+@media (max-width: 768px) {
+  .carousel {
+    height: 40vh; /* Reduce la altura en móviles */
+  }
+
+  .carousel-image {
+    object-fit: contain; /* Mejora en pantallas más pequeñas */
+  }
 }
 
 /* Estilo de los iconos de redes sociales */
