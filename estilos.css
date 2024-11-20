@@ -1,125 +1,48 @@
-/* General */
-body {
-  background-color: #000; /* Fondo negro */
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-/* Encabezado */
-/* Ajustes generales de la sección de bienvenida */
-/* Sección de bienvenida */
-.welcome-section {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(135deg, #000000, #ffcc00);
-    color: #fff;
-    height: 60vh; /* Altura reducida */
-    padding: 20px;
-    gap: 10px; /* Espaciado entre el texto y el carrusel */
-}
-
+/* Texto de bienvenida */
 .welcome-text {
-    flex: 1;
-    max-width: 45%; /* Menor ancho del texto */
-    padding: 20px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 20px;
 }
 
-.welcome-title {
-    font-size: 2.5rem; /* Ajustado para no ser tan grande */
-    font-family: 'Playfair Display', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 15px;
+.intro-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: linear-gradient(to right, #000000, #333333);
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.5;
 }
 
-.welcome-paragraph {
-    font-size: 1.1rem; /* Tamaño menor pero aún legible */
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Carrusel Estilizado */
-.carousel {
-  height: 60vh; /* Altura del carrusel ajustada */
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px; /* Esquinas redondeadas */
-}
-
-.carousel-inner {
-  height: 100%;
-}
-
-/* Ajustes globales para imágenes del carrusel */
+/* Carrusel */
 .carousel-image {
-  height: 60vh; /* Altura estándar */
-  width: 100%; /* Abarca el ancho completo */
-  object-fit: cover; /* Mantiene proporción */
-  transition: transform 0.5s ease, clip-path 0.5s ease; /* Transición suave */
+  height: 300px; /* Altura estándar */
+  object-fit: cover; /* Ajusta proporción sin distorsión */
 }
 
-.carousel-item.active {
-  transform: scale(1); /* Imagen principal */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+.carousel {
+  margin-top: 20px;
 }
 
-.carousel-item-next,
-.carousel-item-prev {
-  transform: scale(0.9); /* Imagen siguiente o previa ligeramente reducida */
-  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
-}
-
-/* Responsividad: Texto y Carrusel */
 @media (max-width: 768px) {
-  .carousel-image {
-    height: 40vh; /* Reduce la altura en móviles */
-    object-fit: contain; /* Evita cortes bruscos */
-  }
-
   .welcome-text {
-    font-size: 1.2rem; /* Fuente más pequeña */
-    margin: 10px; /* Espaciado ajustado */
+    font-size: 1.8rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .carousel-image {
+    height: 250px;
   }
 }
 
 @media (max-width: 576px) {
   .welcome-text {
-    font-size: 1rem; /* Fuente aún más pequeña en dispositivos muy pequeños */
-    text-align: center; /* Centraliza el texto */
+    font-size: 1.5rem;
   }
-
-  .carousel {
-    height: auto; /* Ajusta dinámicamente la altura */
+  .carousel-image {
+    height: 200px;
   }
-}
-
-
-/* Estilo de los iconos de redes sociales */
-.social-icons {
-  font-size: 2.5rem; /* Tamaño de los iconos */
-  color: #fff; /* Color blanco para los iconos */
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Espacio entre los iconos */
-  margin-top: 20px;
-}
-
-.social-icons .social-icon {
-  text-decoration: none;
-  color: inherit; /* Asegura que el color blanco se aplique */
-  transition: transform 0.3s ease; /* Transición para el hover */
-}
-
-.social-icons .social-icon:hover {
-  transform: scale(1.2); /* Efecto de hover para agrandar el icono */
-}
-
-/* Puedes agregar estos estilos si deseas que el fondo de los iconos cambie al pasar el mouse */
-.social-icons .social-icon:hover i {
-  color: #ff9900; /* Cambia el color a un tono dorado cuando el cursor pasa por encima */
 }
