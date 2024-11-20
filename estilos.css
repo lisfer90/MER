@@ -55,55 +55,49 @@ body {
   height: 100%;
 }
 
+/* Ajustes globales para imágenes del carrusel */
 .carousel-image {
-  height: 100%;
-  object-fit: cover; /* Mantiene proporción de las imágenes */
-  filter: brightness(0.9); /* Oscurece ligeramente las imágenes */
-  transition: transform 0.5s ease-in-out; /* Transición suave */
+  height: 60vh; /* Altura estándar */
+  width: 100%; /* Abarca el ancho completo */
+  object-fit: cover; /* Mantiene proporción */
+  transition: transform 0.5s ease, clip-path 0.5s ease; /* Transición suave */
 }
 
-.carousel-item-next,
-.carousel-item-prev,
 .carousel-item.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: scale(1); /* Imagen principal */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .carousel-item-next,
 .carousel-item-prev {
-  transform: scale(0.9); /* Tamaño más pequeño para el próximo frame */
+  transform: scale(0.9); /* Imagen siguiente o previa ligeramente reducida */
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
 }
 
-.carousel-item.active {
-  transform: scale(1); /* Imagen principal más grande */
-}
-
-/* Efecto geométrico al pasar de imagen */
-.carousel-inner .carousel-item {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Geometría predeterminada */
-}
-
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 20% 100%);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* Iconos blancos */
-}
-
-/* Carrusel responsivo */
+/* Responsividad: Texto y Carrusel */
 @media (max-width: 768px) {
-  .carousel {
+  .carousel-image {
     height: 40vh; /* Reduce la altura en móviles */
+    object-fit: contain; /* Evita cortes bruscos */
   }
 
-  .carousel-image {
-    object-fit: contain; /* Mejora en pantallas más pequeñas */
+  .welcome-text {
+    font-size: 1.2rem; /* Fuente más pequeña */
+    margin: 10px; /* Espaciado ajustado */
   }
 }
+
+@media (max-width: 576px) {
+  .welcome-text {
+    font-size: 1rem; /* Fuente aún más pequeña en dispositivos muy pequeños */
+    text-align: center; /* Centraliza el texto */
+  }
+
+  .carousel {
+    height: auto; /* Ajusta dinámicamente la altura */
+  }
+}
+
 
 /* Estilo de los iconos de redes sociales */
 .social-icons {
