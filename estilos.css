@@ -1,48 +1,54 @@
 /* Texto de bienvenida */
 .welcome-text {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #ffc107;
   margin-bottom: 20px;
 }
 
 .intro-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ffffff;
-  background: linear-gradient(to right, #000000, #333333);
-  padding: 20px;
-  border-radius: 8px;
-  line-height: 1.5;
+  background: linear-gradient(to bottom right, #2c2c54, #40407a);
+  padding: 25px;
+  border-radius: 12px;
+  line-height: 1.8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Carrusel */
 .carousel-image {
-  height: 300px; /* Altura estándar */
-  object-fit: cover; /* Ajusta proporción sin distorsión */
+  height: 260px; /* Ajustado para mayor equilibrio */
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.02); /* Animación sutil */
 }
 
 .carousel {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
   .welcome-text {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .intro-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
   }
   .carousel-image {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media (max-width: 576px) {
   .welcome-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .carousel-image {
-    height: 200px;
+    height: 180px;
   }
 }
