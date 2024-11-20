@@ -32,7 +32,8 @@ body {
 
 /* Carrusel */
 .carousel-image {
-  height: 400px;
+  height: 100%;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -52,7 +53,7 @@ body {
     font-size: 1rem;
   }
   .carousel-image {
-    height: 300px;
+    max-height: 300px;
   }
 }
 
@@ -64,6 +65,6 @@ body {
     font-size: 0.9rem;
   }
   .carousel-image {
-    height: 250px;
+    max-height: 250px;
   }
 }
