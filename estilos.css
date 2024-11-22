@@ -1,61 +1,44 @@
-/* General */
-body {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Logo */
-.logo {
-  width: 100px; /* Tamaño aumentado */
-  height: auto;
-}
-
-/* Título y párrafo */
-.welcome {
-  font-size: 2.5rem;
-  color: gold;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
-
-.intro-text {
-  font-size: 1.2rem;
-  color: #e0e0e0;
-  max-width: 800px;
-  text-align: justify;
-  line-height: 1.6;
-}
-
-/* Carrusel */
-.carousel-inner {
-  max-height: 500px; /* Ajusta la altura máxima */
-}
-
+/* Carrusel: ajustamos el tamaño de las imágenes para mejor responsividad */
 .carousel-image {
-  width: 100%;
   height: auto;
-  object-fit: cover; /* Mantiene la proporción sin recortes */
-  border-radius: 10px; /* Bordes redondeados para mejor diseño */
+  max-height: 450px; /* Un poco más grande en pantallas grandes */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.carousel-item img {
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item img:hover {
-  transform: scale(1.05); /* Efecto de zoom */
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .welcome {
-    font-size: 2rem;
+@media (min-width: 992px) {
+  .welcome-title {
+    font-size: 5.5rem;  /* Un poco más grande */
   }
+  .welcome-text {
+    font-size: 2rem;  /* Texto un poco más grande */
+  }
+  .carousel-image {
+    max-height: 500px;  /* Imágenes más grandes para pantallas grandes */
+  }
+}
 
-  .intro-text {
-    font-size: 1rem;
-    text-align: center;
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 4rem;  /* Reducir un poco el tamaño */
+  }
+  .welcome-text {
+    font-size: 1.7rem; /* Tamaño ajustado */
+  }
+  .carousel-image {
+    max-height: 350px;  /* Imágenes más pequeñas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-title {
+    font-size: 3.2rem; /* Reducción para pantallas pequeñas */
+  }
+  .welcome-text {
+    font-size: 1.4rem;
+  }
+  .carousel-image {
+    max-height: 300px; /* Ajuste más pequeño para móviles */
   }
 }
