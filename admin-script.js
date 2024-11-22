@@ -9,6 +9,26 @@ document.getElementById("logout").addEventListener("click", function () {
   window.location.href = "login.html"; // Redirigir al login al cerrar sesión
 });
 
+// Cargar productos desde localStorage
+function loadProducts() {
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+  const productList = document.getElementById("productList");
+  productList.innerHTML = ""; // Limpiar la lista de productos actual
+
+  products.forEach((product, index) => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product-item");
+    productDiv.innerHTML = `
+      <h3>${product.name}</h3>
+      <img src="${product.image}" alt="${product.name}" width="100">
+      <p>Precio: $${product.price}</p>
+      <p>Detalles: ${product.details}</p>
+      <button class="btn btn-danger" onclick="deleteProduct(${index})">Eliminar</button>
+    `;
+    productList.appendChild(productDiv);
+  });
+}
+
 // Agregar un producto al catálogo
 document.getElementById("addProductForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -27,16 +47,28 @@ document.getElementById("addProductForm").addEventListener("submit", function (e
       image: URL.createObjectURL(productImage),
     };
 
-    // Agregar el producto a la lista
-    const productList = document.getElementById("productList");
-    const productDiv = document.createElement("div");
-    productDiv.innerHTML = `
-      <h3>${product.name}</h3>
-      <img src="${product.image}" alt="${product.name}" width="100">
-      <p>Precio: $${product.price}</p>
-      <p>Detalles: ${product.details}</p>
-      <button>Eliminar</button>
-    `;
-    productList.appendChild(productDiv);
+    // Obtener productos actuales desde localStorage
+    const products = JSON.parse(localStorage.getItem("products")) || [];
+    products.push(product);
+
+    // Guardar los productos en localStorage
+    localStorage.setItem("products", JSON.stringify(products));
+
+    // Cargar productos nuevamente
+    loadProducts();
+
+    // Limpiar el formulario
+    document.getElementById("addProductForm").reset();
   }
 });
+
+// Eliminar un producto
+function deleteProduct(index) {
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+  products.splice(index, 1); // Eliminar el producto de la lista
+  localStorage.setItem("products", JSON.stringify(products)); // Actualizar el localStorage
+  loadProducts(); // Recargar la lista de productos
+}
+
+// Inicializar la lista de productos
+loadProducts();
