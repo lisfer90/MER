@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Administración</title>
-  <link rel="stylesheet" href="estilos.css">
+  <title>Panel de Administración - MER</title>
+  <link href="estilos.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-dark text-light">
   <h1>Panel de Administración</h1>
-  <button id="logout">Cerrar Sesión</button>
+  <button id="logout" class="btn btn-danger">Cerrar Sesión</button>
 
   <!-- Formulario para agregar productos -->
   <form id="addProductForm">
@@ -24,7 +24,7 @@
     <label for="productImage">Imagen</label>
     <input type="file" id="productImage" accept="image/*" required>
 
-    <button type="submit">Agregar Producto</button>
+    <button type="submit" class="btn btn-success">Agregar Producto</button>
   </form>
 
   <h2>Lista de Productos</h2>
