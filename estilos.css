@@ -1,6 +1,6 @@
-/* Fondo degradado elegante */
+/* Fondo con degradado elegante */
 body {
-  background: linear-gradient(135deg, #0a0a0a, #1f1f1f, #0a0a0a); /* Fondo dinámico */
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #0a0a0a);
   color: #f5f5f5;
   font-family: 'Roboto Slab', serif;
   margin: 0;
@@ -58,7 +58,7 @@ body {
   box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Carrusel de imágenes */
+/* Carrusel */
 .carousel-container {
   margin: 20px auto;
   max-width: 90%;
