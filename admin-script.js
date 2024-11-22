@@ -1,70 +1,42 @@
-// Verificar si el usuario está autenticado
+// Verificar si el usuario está logueado
 if (!localStorage.getItem("isLoggedIn")) {
-  window.location.href = "index.html";
+  window.location.href = "login.html"; // Si no está logueado, redirigir al login
 }
 
-// Cerrar sesión
-document.getElementById("logout").addEventListener("click", () => {
+// Manejar el cierre de sesión
+document.getElementById("logout").addEventListener("click", function () {
   localStorage.removeItem("isLoggedIn");
-  window.location.href = "index.html";
+  window.location.href = "login.html"; // Redirigir al login al cerrar sesión
 });
 
-// Manejo de productos
-const productList = JSON.parse(localStorage.getItem("products")) || [];
-
-// Renderizar productos
-function renderProducts() {
-  const productContainer = document.getElementById("productList");
-  productContainer.innerHTML = "";
-
-  productList.forEach((product, index) => {
-    const productCard = document.createElement("div");
-    productCard.className = "product-card";
-    productCard.innerHTML = `
-      <h3>${product.name}</h3>
-      <p>Precio: $${product.price}</p>
-      <p>Detalles: ${product.details}</p>
-      <img src="${product.image}" alt="${product.name}" class="product-image">
-      <button onclick="deleteProduct(${index})">Eliminar</button>
-    `;
-    productContainer.appendChild(productCard);
-  });
-}
-
-// Agregar producto
+// Agregar un producto al catálogo
 document.getElementById("addProductForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const name = document.getElementById("productName").value;
-  const price = document.getElementById("productPrice").value;
-  const details = document.getElementById("productDetails").value;
-  const image = document.getElementById("productImage").files[0];
+  const productName = document.getElementById("productName").value;
+  const productPrice = document.getElementById("productPrice").value;
+  const productDetails = document.getElementById("productDetails").value;
+  const productImage = document.getElementById("productImage").files[0];
 
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    const newProduct = {
-      name,
-      price,
-      details,
-      image: e.target.result // Imagen como base64
+  // Validar los datos
+  if (productName && productPrice && productDetails && productImage) {
+    const product = {
+      name: productName,
+      price: productPrice,
+      details: productDetails,
+      image: URL.createObjectURL(productImage),
     };
 
-    productList.push(newProduct);
-    localStorage.setItem("products", JSON.stringify(productList));
-    renderProducts();
-  };
-  reader.readAsDataURL(image);
-
-  // Limpiar formulario
-  this.reset();
+    // Agregar el producto a la lista
+    const productList = document.getElementById("productList");
+    const productDiv = document.createElement("div");
+    productDiv.innerHTML = `
+      <h3>${product.name}</h3>
+      <img src="${product.image}" alt="${product.name}" width="100">
+      <p>Precio: $${product.price}</p>
+      <p>Detalles: ${product.details}</p>
+      <button>Eliminar</button>
+    `;
+    productList.appendChild(productDiv);
+  }
 });
-
-// Eliminar producto
-function deleteProduct(index) {
-  productList.splice(index, 1);
-  localStorage.setItem("products", JSON.stringify(productList));
-  renderProducts();
-}
-
-// Inicializar
-renderProducts();
