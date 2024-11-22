@@ -42,9 +42,10 @@ body {
 }
 
 /* Carrusel */
+/* Carrusel */
 .carousel-image {
   height: auto;
-  max-height: 400px; /* Incrementado para mayor visibilidad */
+  max-height: 550px; /* Incrementado para mayor altura */
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -57,28 +58,23 @@ body {
 
 /* Responsivo */
 @media (min-width: 992px) {
-  .welcome-title {
-    font-size: 5rem;
-  }
-  .welcome-text {
-    font-size: 1.9rem;
+  .carousel-image {
+    max-height: 650px; /* Ajustado para pantallas grandes */
   }
 }
 
 @media (max-width: 768px) {
-  .brand-title {
-    font-size: 2.5rem;
-  }
-  .welcome-title {
-    font-size: 3.5rem;
-  }
-  .welcome-text {
-    font-size: 1.6rem;
-  }
   .carousel-image {
-    max-height: 320px;
+    max-height: 450px; /* Ajustado para tablets */
   }
 }
+
+@media (max-width: 576px) {
+  .carousel-image {
+    max-height: 380px; /* Ajustado para móviles */
+  }
+}
+
 
 @media (max-width: 576px) {
   .brand-title {
