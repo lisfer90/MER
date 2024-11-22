@@ -1,6 +1,6 @@
-/* Fondo degradado */
+/* Fondo degradado elegante */
 body {
-  background: linear-gradient(135deg, #000000, #1a1a1a, #000000); /* Fondo con variación de negros */
+  background: linear-gradient(135deg, #0a0a0a, #1f1f1f, #0a0a0a); /* Fondo dinámico */
   color: #f5f5f5;
   font-family: 'Roboto Slab', serif;
   margin: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 .logo {
-  width: 300px; /* Logo más grande */
+  width: 350px; /* Tamaño adecuado */
   height: auto;
   margin-right: 15px;
 }
@@ -39,8 +39,9 @@ body {
 }
 
 .welcome-title {
-  font-size: 4.5rem;
-  font-family: 'Great Vibes', cursive; /* Cursiva elegante */
+  font-size: 4.8rem;
+  font-family: 'Great Vibes', cursive;
+  font-style: italic;
   color: #ffbf00;
   text-shadow: 3px 3px 15px rgba(255, 165, 0, 0.7);
   margin-bottom: 20px;
@@ -48,7 +49,7 @@ body {
 
 .welcome-text {
   font-size: 1.8rem;
-  font-family: 'Roboto Slab', serif; /* Elegante y legible */
+  font-family: 'Roboto Slab', serif;
   background: linear-gradient(135deg, #333333, #555555);
   color: #ffdf80;
   padding: 25px;
@@ -65,13 +66,13 @@ body {
 
 .carousel {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
 }
 
 .carousel-image {
   width: 100%;
-  height: 220px;
+  height: 280px; /* Tamaño adecuado */
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -85,13 +86,13 @@ body {
 /* Responsivo */
 @media (min-width: 992px) {
   .welcome-title {
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
   .welcome-text {
     font-size: 2rem;
   }
   .carousel-image {
-    height: 260px;
+    height: 320px;
   }
 }
 
@@ -100,13 +101,13 @@ body {
     font-size: 3rem;
   }
   .welcome-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
   .welcome-text {
     font-size: 1.6rem;
   }
   .carousel-image {
-    height: 200px;
+    height: 220px;
   }
 }
 
@@ -121,6 +122,6 @@ body {
     font-size: 1.4rem;
   }
   .carousel-image {
-    height: 180px;
+    height: 200px;
   }
 }
