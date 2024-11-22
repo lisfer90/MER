@@ -8,22 +8,14 @@ body {
 
 /* Logo */
 .logo {
-  width: 250px; /* Agrandado ligeramente */
+  width: 300px; /* Agrandado */
   height: auto;
   object-fit: contain;
 }
 
-.brand-title {
-  font-size: 3rem;
-  font-family: 'Cinzel Decorative', serif;
-  color: #ffd700;
-  letter-spacing: 3px;
-  text-align: center;
-}
-
 /* Título de bienvenida centrado */
 .welcome-title {
-  font-size: 3.5rem; /* Tamaño reducido */
+  font-size: 3.5rem; /* Tamaño ajustado */
   font-family: 'Lora', serif;
   font-style: italic;
   color: #ffbf00;
@@ -33,7 +25,7 @@ body {
 
 /* Texto de bienvenida */
 .welcome-text {
-  font-size: 1.6rem; /* Tamaño ajustado */
+  font-size: 1.6rem;
   font-family: 'Lora', serif;
   background: linear-gradient(135deg, #222222, #444444);
   color: #ffdf80;
@@ -55,37 +47,4 @@ body {
 .carousel-image:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .welcome-title {
-    font-size: 2.5rem;
-  }
-
-  .welcome-text {
-    font-size: 1.4rem;
-  }
-
-  .carousel-image {
-    max-height: 450px;
-  }
-}
-
-@media (max-width: 576px) {
-  .brand-title {
-    font-size: 2.5rem;
-  }
-
-  .welcome-title {
-    font-size: 2rem;
-  }
-
-  .welcome-text {
-    font-size: 1.2rem;
-  }
-
-  .carousel-image {
-    max-height: 380px;
-  }
 }
