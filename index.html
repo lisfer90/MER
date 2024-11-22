@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
   <link href="estilos.css" rel="stylesheet">
 </head>
-<body class="bg-dark text-light">
+<body>
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="Logo MER" class="logo me-3">
-        <span class="brand-title"></span>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo.png" alt="Logo MER" class="logo me-2">
+        <span class="brand-title">MER Innovar Solution</span>
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="catalogo.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="ubicacion.html">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light ms-3" href="admin-login.html">Inicio de Sesión</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -28,8 +47,7 @@
       </div>
       <div class="col-lg-5 text-center text-lg-start">
         <p class="welcome-text">
-          En <b>MER Innovar Solution</b>, hacemos realidad tus sueños. Transformamos espacios con innovación, creatividad y diseño. <br><br>
-          Nuestros expertos trabajan con pasión para ofrecerte soluciones únicas en construcción, iluminación y diseño de interiores. Ven, construyamos juntos el futuro que deseas.
+          En <b>MER Innovar Solution</b>, hacemos realidad tus sueños. Transformamos espacios con innovación, creatividad y diseño. Nuestros expertos trabajan con pasión para ofrecerte soluciones únicas en construcción, iluminación y diseño de interiores. ¡Ven, construyamos juntos el futuro que deseas!
         </p>
       </div>
 
@@ -43,19 +61,7 @@
             <div class="carousel-item">
               <img src="imagen2.jpg" class="d-block w-100 carousel-image" alt="Imagen 2">
             </div>
-             <div class="carousel-item active">
-              <img src="imagen3.jpg" class="d-block w-100 carousel-image" alt="Imagen 1">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen4.jpg" class="d-block w-100 carousel-image" alt="Imagen 2">
-            </div>
-             <div class="carousel-item active">
-              <img src="imagen5.jpg" class="d-block w-100 carousel-image" alt="Imagen 1">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen6.jpg" class="d-block w-100 carousel-image" alt="Imagen 2">
-            </div>
-            <!-- Más imágenes -->
+            <!-- Agrega más imágenes aquí -->
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
