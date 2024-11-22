@@ -3,35 +3,37 @@ body {
   background: linear-gradient(135deg, #000000, #333333, #000000);
   color: #f5f5f5;
   font-family: 'Lora', serif;
+  margin: 0;
 }
 
 /* Logo */
 .logo {
-  width: 220px; /* Ajustado para mayor visibilidad */
+  width: 250px; /* Agrandado ligeramente */
   height: auto;
   object-fit: contain;
 }
 
 .brand-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-family: 'Cinzel Decorative', serif;
   color: #ffd700;
   letter-spacing: 3px;
+  text-align: center;
 }
 
 /* Título de bienvenida centrado */
 .welcome-title {
-  font-size: 4.5rem;
+  font-size: 3.5rem; /* Tamaño reducido */
   font-family: 'Lora', serif;
   font-style: italic;
   color: #ffbf00;
   text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.7);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Texto de bienvenida */
 .welcome-text {
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Tamaño ajustado */
   font-family: 'Lora', serif;
   background: linear-gradient(135deg, #222222, #444444);
   color: #ffdf80;
@@ -42,10 +44,9 @@ body {
 }
 
 /* Carrusel */
-/* Carrusel */
 .carousel-image {
-  height: auto;
-  max-height: 550px; /* Incrementado para mayor altura */
+  width: 100%;
+  max-height: 550px;
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -57,36 +58,34 @@ body {
 }
 
 /* Responsivo */
-@media (min-width: 992px) {
-  .carousel-image {
-    max-height: 650px; /* Ajustado para pantallas grandes */
-  }
-}
-
 @media (max-width: 768px) {
-  .carousel-image {
-    max-height: 450px; /* Ajustado para tablets */
-  }
-}
-
-@media (max-width: 576px) {
-  .carousel-image {
-    max-height: 380px; /* Ajustado para móviles */
-  }
-}
-
-
-@media (max-width: 576px) {
-  .brand-title {
-    font-size: 2.2rem;
-  }
   .welcome-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
+
   .welcome-text {
     font-size: 1.4rem;
   }
+
   .carousel-image {
-    max-height: 280px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-title {
+    font-size: 2.5rem;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+
+  .carousel-image {
+    max-height: 380px;
   }
 }
