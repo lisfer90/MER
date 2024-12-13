@@ -3,43 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MER - Inicio</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MER y ENGA - Construcción y Ventas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="ubicacion.html">Ubicación</a>
-    </nav>
-
-    <!-- Carrusel -->
-    <div class="carousel">
-        <div class="slides">
-            <img src="imagen1.jpg" alt="Imagen 1">
-            <img src="imagen2.jpg" alt="Imagen 2">
-            <img src="imagen3.jpg" alt="Imagen 3">
-            <img src="imagen4.jpg" alt="Imagen 4">
-            <img src="imagen5.jpg" alt="Imagen 5">
-            <img src="imagen6.jpg" alt="Imagen 6">
-            <img src="imagen7.jpg" alt="Imagen 7">
-            <img src="imagen8.jpg" alt="Imagen 8">
-            <img src="imagen9.jpg" alt="Imagen 9">
-            <img src="imagen10.jpg" alt="Imagen 10">
+    <!-- Inicio -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="MER y ENGA">
+            </div>
+            <div class="login-signup">
+                <button>Inicio de sesión</button>
+                <button>Registro</button>
+            </div>
         </div>
-    </div>
-
-    <!-- Bienvenida -->
-    <header class="hero">
-        <h1>Bienvenido a MER</h1>
-        <p>Tu aliado en construcción, PVC y productos eléctricos. Explora nuestros servicios y encuentra lo que necesitas para tus proyectos.</p>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Pie de página -->
+    <!-- Catálogo -->
+    <section id="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div id="productos">
+            <!-- Aquí se agregarían los productos dinámicamente con base de datos -->
+        </div>
+        <button>Pagar</button>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <div id="mapa">
+            <!-- Embed de Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros">
+        <h2>Quiénes Somos</h2>
+        <div id="informacion">
+            <h3>Misión</h3>
+            <p>Descripción de la misión.</p>
+            <h3>Visión</h3>
+            <p>Descripción de la visión.</p>
+            <h3>Valores</h3>
+            <p>Descripción de los valores.</p>
+        </div>
+        <div id="personal">
+            <h3>Conoce al equipo</h3>
+            <!-- Imágenes del personal -->
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 MER - Todos los derechos reservados</p>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="https://www.facebook.com/merenga">Facebook</a>
+                <a href="https://www.instagram.com/merenga">Instagram</a>
+                <a href="https://wa.me/3103056852">WhatsApp</a>
+            </div>
+            <p>&copy; 2024 MER y ENGA</p>
+        </div>
     </footer>
 </body>
 </html>
