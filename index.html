@@ -1,88 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MER Innovar Solution</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-  <link href="estilos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - MER</title>
+    <link rel="stylesheet" href="public/ubicacion.css">
 </head>
-<body class="bg-dark text-light">
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="Logo MER" class="logo me-3">
-      </a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a> <!-- Enlace al inicio -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ubicacion.html">Ubicación</a> <!-- Enlace a la ubicación -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="nosotros.html">Nosotros</a> <!-- Enlace a la sección de Nosotros -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Inicio de sesión</a> <!-- Enlace al inicio de sesión -->
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="ubicacion.html" class="active">Ubicación</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </nav>
 
-  <!-- Contenido principal -->
-  <div class="container-fluid py-5 main-container text-center">
-    <div class="row align-items-center">
-      <!-- Texto de bienvenida -->
-      <div class="col-12">
-        <h1 class="welcome-title">¡Bienvenidos a MER!</h1>
-      </div>
-      <div class="col-lg-5 text-center text-lg-start">
-        <p class="welcome-text">
-          En <b>MER Innovar Solution</b>, hacemos realidad tus sueños. Transformamos espacios con innovación, creatividad y diseño. <br><br>
-          Nuestros expertos trabajan con pasión para ofrecerte soluciones únicas en construcción, iluminación y diseño de interiores. Ven, construyamos juntos el futuro que deseas.
-        </p>
-      </div>
+    <header>
+        <h1>Ubicación de MER</h1>
+    </header>
+    <main>
+        <section class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.175799212112!2d-76.6176574860525!3d2.453423399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30037323d6e7f3%3A0xa116fc151e32bbf3!2sCalle%2018n%20%236n-52%2C%20Popay%C3%A1n%2C%20Cauca%2C%20Colombia!5e0!3m2!1ses-419!2ses!4v1696173805507!5m2!1ses-419!2ses"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+        <section class="details">
+            <h2>Visítanos en nuestra tienda física</h2>
+            <p>Dirección: Calle 18N #6N-52, Popayán, Cauca</p>
+            <p>Horario: Lunes a Sábado, 8:00 AM - 6:00 PM</p>
+            <button class="map-button" onclick="openGoogleMaps()">
+                Ver en Google Maps
+            </button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 MER - Todos los derechos reservados</p>
+    </footer>
 
-      <!-- Carrusel -->
-      <div class="col-lg-7">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="imagen1.jpg" class="d-block w-100 carousel-image" alt="Imagen 1">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen2.jpg" class="d-block w-100 carousel-image" alt="Imagen 2">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen3.jpg" class="d-block w-100 carousel-image" alt="Imagen 3">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen4.jpg" class="d-block w-100 carousel-image" alt="Imagen 4">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen5.jpg" class="d-block w-100 carousel-image" alt="Imagen 5">
-            </div>
-            <div class="carousel-item">
-              <img src="imagen6.jpg" class="d-block w-100 carousel-image" alt="Imagen 6">
-            </div>
-            <!-- Agrega más imágenes si es necesario -->
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openGoogleMaps() {
+            window.open('https://www.google.com/maps?q=Calle+18N+%236N-52,+Popay%C3%A1n,+Cauca,+Colombia', '_blank');
+        }
+    </script>
 </body>
 </html>
