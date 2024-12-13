@@ -40,13 +40,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* Espaciado aumentado entre los elementos */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px; /* Tamaño de letra más grande */
+    font-size: 22px; /* Tamaño de letra más grande */
     text-transform: uppercase;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
@@ -76,6 +76,7 @@ nav ul li a.active {
     margin: 30px 0;
     position: relative;
     overflow: hidden;
+    max-width: 100%; /* Asegura que no sobrepase el límite de la pantalla */
 }
 
 .carousel-images {
@@ -84,8 +85,9 @@ nav ul li a.active {
 }
 
 .carousel-images img {
-    width: 100%; /* Mantener las imágenes sin recorte */
-    height: auto; /* Asegura que no se distorsionen */
+    width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+    height: 300px; /* Fija la altura para evitar que se amplíen demasiado */
+    object-fit: cover; /* Mantiene la imagen proporcional sin distorsionarse */
     display: block;
 }
 
@@ -127,6 +129,7 @@ nav ul li a.active {
     font-size: 36px;
     color: #FFD700;
     font-weight: bold;
+    text-align: center;
 }
 
 .hero p {
