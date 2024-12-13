@@ -3,42 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación - MER</title>
-    <link rel="stylesheet" href="public/ubicacion.css">
+    <title>MER - Ubicación</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Ubicación de MER</h1>
-    </header>
-    <main>
-        <section class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.175799212112!2d-76.6176574860525!3d2.453423399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30037323d6e7f3%3A0xa116fc151e32bbf3!2sCalle%2018n%20%236n-52%2C%20Popay%C3%A1n%2C%20Cauca%2C%20Colombia!5e0!3m2!1ses-419!2ses!4v1696173805507!5m2!1ses-419!2ses"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
-        <section class="details">
-            <h2>Visítanos en nuestra tienda física</h2>
-            <p>Dirección: Calle 18N #6N-52, Popayán, Cauca</p>
-            <p>Horario: Lunes a Sábado, 8:00 AM - 6:00 PM</p>
-            <button class="map-button" onclick="openGoogleMaps()">
-                Ver en Google Maps
-            </button>
-        </section>
-    </main>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="ubicacion.html" class="active">Ubicación</a>
+    </nav>
+
+    <!-- Mapa de ubicación -->
+    <section class="map">
+        <h2>Encuéntranos</h2>
+        <p>Estamos ubicados en la Calle 18 Norte #6-52, Popayán, Cauca.</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.891377379798!2d-76.6107386847375!3d2.446864598081065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3002b2c1383cbb%3A0xa20a5a14721c58ec!2sCalle%2018n%20%236n-52%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses-419!2sco!4v1701234567890"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
         <p>© 2024 MER - Todos los derechos reservados</p>
     </footer>
-
-    <script>
-        function openGoogleMaps() {
-            window.open('https://www.google.com/maps?q=Calle+18N+%236N-52,+Popay%C3%A1n,+Cauca,+Colombia', '_blank');
-        }
-    </script>
 </body>
 </html>
