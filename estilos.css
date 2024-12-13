@@ -1,73 +1,46 @@
-/* Fondo degradado */
-body {
-  background: linear-gradient(135deg, #000000, #333333, #000000);
-  color: #f5f5f5;
-  font-family: 'Lora', serif;
-  margin: 0;
-}
-
-/* Logo */
-.logo {
-  width: 300px; /* Agrandado */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Título de bienvenida centrado */
-.welcome-title {
-  font-size: 3.5rem; /* Tamaño ajustado */
-  font-family: 'Lora', serif;
-  font-style: italic;
-  color: #ffbf00;
-  text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.7);
-  margin-bottom: 20px;
-}
-
-/* Texto de bienvenida */
-.welcome-text {
-  font-size: 1.6rem;
-  font-family: 'Lora', serif;
-  background: linear-gradient(135deg, #222222, #444444);
-  color: #ffdf80;
-  padding: 25px;
-  border-radius: 10px;
-  line-height: 1.8;
-  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.2);
-}
-
-/* Carrusel */
-.carousel-image {
-  width: 100%;
-  max-height: 550px;
-  object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.carousel-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
-}
-/* Estilos generales */
+/* Estilo global */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: #000; /* Fondo negro elegante */
+    color: #FFD700; /* Letras doradas */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #FFD700;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #FFA500; /* Naranja para el hover y activo */
 }
 
 /* Encabezado */
 header {
-    background-color: #ff5722;
-    color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #222;
+    border-bottom: 2px solid #FFD700;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0;
 }
 
@@ -78,53 +51,51 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #111;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Detalles del negocio */
 .details {
     padding: 20px;
     text-align: center;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 15px;
+    background: #222;
     border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
 }
 
 .details h2 {
-    font-size: 1.5em;
-    color: #ff5722;
+    color: #FFA500; /* Naranja elegante */
     margin-bottom: 10px;
 }
 
 .details p {
     margin: 5px 0;
-    font-size: 1em;
 }
 
 .map-button {
-    background-color: #ff5722;
-    color: white;
+    background-color: #FFA500;
+    color: #000;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .map-button:hover {
-    background-color: #e64a19;
+    background-color: #FFD700;
+    color: #333;
 }
 
 /* Pie de página */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
+    padding: 10px;
+    background-color: #111;
+    color: #FFD700;
     font-size: 0.9em;
-    margin-top: 20px;
 }
-
