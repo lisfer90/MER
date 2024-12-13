@@ -54,7 +54,7 @@ nav a:hover {
 
 /* Logo */
 .header-container .logo img {
-    max-width: 300px;  /* Logo más grande */
+    max-width: 400px;  /* Aumentamos el tamaño del logo */
     transition: transform 0.3s ease;  /* Agregar un efecto suave al hover */
     margin: 0 auto;  /* Centra el logo */
 }
