@@ -1,40 +1,30 @@
-/* Variables */
+/* Definimos colores */
 :root {
+    --gris-oscuro: #2c2c2c;
+    --gris-claro: #4d4d4d;
     --negro: #000000;
-    --gris-claro: #2f2f2f;
-    --gris-oscuro: #1c1c1c;
-    --dorado: #FFD700;
+    --dorado: #d4af37;
 }
 
-/* General */
+/* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--gris-oscuro);
-    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;  /* Fondo oscuro */
+    color: white;
     margin: 0;
     padding: 0;
 }
 
 /* Barra de Navegación */
 header {
-    background-color: var(--gris-claro);
+    background-color: var(--gris-oscuro);  /* Fondo más oscuro para que resalte */
     padding: 20px 30px;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-container .logo img {
-    max-width: 200px;  /* Aumento del tamaño del logo */
-}
-
 nav {
-    background-color: var(--gris-claro);
+    background-color: var(--gris-claro);  /* Fondo más claro para la nav */
     padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra para resaltar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra para destacar */
 }
 
 nav ul {
@@ -45,29 +35,28 @@ nav ul {
 }
 
 nav a {
-    color: var(--dorado);
+    color: var(--dorado);  /* Enlaces en dorado */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;  /* Bordes redondeados para un toque más elegante */
+    transition: background-color 0.3s ease;  /* Transición suave para el hover */
 }
 
-/* Sección de Inicio */
-#inicio {
-    padding: 20px;
-    text-align: center;
+nav a:hover {
+    background-color: var(--negro);  /* Efecto de hover con fondo oscuro */
+    color: var(--dorado);  /* El texto sigue siendo dorado */
 }
 
-#inicio h1 {
-    font-family: 'Times New Roman', serif;
-    font-style: italic;
-    font-size: 3rem;
-    color: var(--dorado); /* Título dorado */
+/* Logo */
+.header-container .logo img {
+    max-width: 250px;  /* Logo más grande */
+    transition: transform 0.3s ease;  /* Agregar un efecto suave al hover */
 }
 
-#inicio .bienvenida {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    color: #fff;
+.header-container .logo img:hover {
+    transform: scale(1.1);  /* Aumenta ligeramente el logo cuando pasa el mouse */
 }
 
 /* Carrusel de imágenes */
@@ -86,67 +75,55 @@ nav a {
 
 .carousel-images img {
     width: 100%;
-    height: 100%; /* Asegura que la imagen ocupe todo el espacio */
-    object-fit: contain; /* Cambiado de 'cover' a 'contain' */
+    height: auto; /* Asegura que la imagen mantenga su proporción */
+    object-fit: contain; /* Evita el recorte de imágenes */
 }
 
-
-/* Carrusel con repetición infinita */
+/* Animación del carrusel */
 @keyframes slide {
     0% { transform: translateX(0); }
-    10% { transform: translateX(-100%); }
-    20% { transform: translateX(-200%); }
-    30% { transform: translateX(-300%); }
-    40% { transform: translateX(-400%); }
-    50% { transform: translateX(-500%); }
-    60% { transform: translateX(-600%); }
-    70% { transform: translateX(-700%); }
-    80% { transform: translateX(-800%); }
-    90% { transform: translateX(-900%); }
-    100% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
 }
 
-.download-btn a {
-    color: #fff;
+/* Estilos para el botón de descarga */
+.download-btn {
     background-color: var(--dorado);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     margin-top: 20px;
 }
 
-.download-btn a:hover {
-    background-color: var(--gris-claro);
+.download-btn a {
+    color: black;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #bfa22f;  /* Un dorado más oscuro al hacer hover */
 }
 
 /* Footer */
 footer {
-    background-color: var(--gris-claro);
-    color: #fff;
+    background-color: var(--gris-oscuro);
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
-footer .social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.footer-container .social-media a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
 }
 
-footer .social-media a {
-    color: var(--dorado);
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-footer .social-media i {
-    width: 30px;
-    height: 30px;
-}
-
-/* Móvil */
-@media (max-width: 768px) {
-    #personal {
-        flex-direction: column;
-    }
+.footer-container .social-media a:hover {
+    opacity: 0.7;
 }
