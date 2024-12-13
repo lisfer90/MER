@@ -13,12 +13,14 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Barra de Navegación */
 header {
     background-color: var(--gris-oscuro);  /* Fondo más oscuro para que resalte */
     padding: 20px 30px;
+    text-align: center;
 }
 
 nav {
@@ -32,6 +34,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
+    padding: 0;
 }
 
 nav a {
@@ -51,8 +54,9 @@ nav a:hover {
 
 /* Logo */
 .header-container .logo img {
-    max-width: 250px;  /* Logo más grande */
+    max-width: 300px;  /* Logo más grande */
     transition: transform 0.3s ease;  /* Agregar un efecto suave al hover */
+    margin: 0 auto;  /* Centra el logo */
 }
 
 .header-container .logo img:hover {
@@ -63,7 +67,7 @@ nav a:hover {
 #carousel {
     position: relative;
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
     overflow: hidden;
     margin-top: 20px;
 }
@@ -75,8 +79,8 @@ nav a:hover {
 
 .carousel-images img {
     width: 100%;
-    height: auto; /* Asegura que la imagen mantenga su proporción */
-    object-fit: contain; /* Evita el recorte de imágenes */
+    height: 100%;
+    object-fit: cover; /* Ajusta las imágenes sin recortarlas, manteniendo el tamaño adecuado */
 }
 
 /* Animación del carrusel */
@@ -89,16 +93,21 @@ nav a:hover {
 }
 
 /* Estilos para el botón de descarga */
+.download-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .download-btn {
     background-color: var(--dorado);
     color: black;
     border: none;
     padding: 15px 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px;
 }
 
 .download-btn a {
@@ -126,4 +135,21 @@ footer {
 
 .footer-container .social-media a:hover {
     opacity: 0.7;
+}
+
+/* Diseño responsive */
+@media screen and (max-width: 768px) {
+    /* Adaptación para móviles */
+    header, nav, footer {
+        padding: 10px;
+    }
+
+    .carousel-images {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        width: 80%;  /* El botón ocupa un 80% del ancho en pantallas pequeñas */
+        font-size: 1rem;
+    }
 }
