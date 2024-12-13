@@ -81,6 +81,7 @@ header nav a {
     object-fit: cover;
 }
 
+/* Carrusel con repetición infinita */
 @keyframes slide {
     0% { transform: translateX(0); }
     10% { transform: translateX(-100%); }
@@ -92,7 +93,7 @@ header nav a {
     70% { transform: translateX(-700%); }
     80% { transform: translateX(-800%); }
     90% { transform: translateX(-900%); }
-    100% { transform: translateX(-1000%); }
+    100% { transform: translateX(0); }
 }
 
 .download-btn a {
@@ -101,6 +102,7 @@ header nav a {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .download-btn a:hover {
