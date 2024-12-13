@@ -17,7 +17,7 @@ h1, h2 {
     color: #FFD700; /* Dorado para títulos */
 }
 
-/* Barra de navegación */
+/* Barra de Navegación */
 header {
     background-color: #1a1a1a;
     padding: 10px 0;
@@ -67,6 +67,7 @@ nav ul li a.active {
     background-color: #FFD700;
     color: #121212;
 }
+
 
 /* Sección Hero */
 .hero {
