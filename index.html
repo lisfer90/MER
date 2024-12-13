@@ -3,51 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación - MER</title>
-    <link rel="stylesheet" href="public/ubicacion.css">
+    <title>Inicio - MER</title>
+    <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <a href="index.html">Inicio</a>
+        <a href="index.html" class="active">Inicio</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="catalogo.html">Catálogo</a>
-        <a href="ubicacion.html" class="active">Ubicación</a>
+        <a href="ubicacion.html">Ubicación</a>
         <a href="login.html">Iniciar Sesión</a>
     </nav>
 
+    <!-- Contenido principal -->
     <header>
-        <h1>Ubicación de MER</h1>
+        <h1>Bienvenidos a MER</h1>
+        <p>Tu mejor aliado en materiales de construcción, PVC, y productos eléctricos.</p>
     </header>
     <main>
-        <section class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15906.175799212112!2d-76.6176574860525!3d2.453423399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30037323d6e7f3%3A0xa116fc151e32bbf3!2sCalle%2018n%20%236n-52%2C%20Popay%C3%A1n%2C%20Cauca%2C%20Colombia!5e0!3m2!1ses-419!2ses!4v1696173805507!5m2!1ses-419!2ses"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
-        <section class="details">
-            <h2>Visítanos en nuestra tienda física</h2>
-            <p>Dirección: Calle 18N #6N-52, Popayán, Cauca</p>
-            <p>Horario: Lunes a Sábado, 8:00 AM - 6:00 PM</p>
-            <button class="map-button" onclick="openGoogleMaps()">
-                Ver en Google Maps
-            </button>
+        <section class="carousel">
+            <!-- Aquí va el contenido del carrusel -->
+            <img src="public/images/slide1.jpg" alt="Slide 1">
+            <img src="public/images/slide2.jpg" alt="Slide 2">
+            <img src="public/images/slide3.jpg" alt="Slide 3">
         </section>
     </main>
     <footer>
         <p>© 2024 MER - Todos los derechos reservados</p>
     </footer>
-
-    <script>
-        function openGoogleMaps() {
-            window.open('https://www.google.com/maps?q=Calle+18N+%236N-52,+Popay%C3%A1n,+Cauca,+Colombia', '_blank');
-        }
-    </script>
 </body>
 </html>
