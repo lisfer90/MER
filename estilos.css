@@ -1,10 +1,10 @@
-/* Estilo global */
+/* Fondo y tipografía */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000; /* Fondo negro elegante */
+    background-color: #000; /* Fondo negro */
     color: #FFD700; /* Letras doradas */
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .navbar a:hover, .navbar a.active {
-    color: #FFA500; /* Naranja para el hover y activo */
+    color: #FFA500; /* Naranja para hover y activo */
 }
 
 /* Encabezado */
@@ -44,51 +44,27 @@ header h1 {
     margin: 0;
 }
 
-/* Contenedor del mapa */
-.map-container {
-    width: 100%;
-    margin: 20px 0;
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Carrusel */
+.carousel {
     display: flex;
+    overflow: hidden;
     justify-content: center;
-    align-items: center;
-    background: #111;
+    margin: 20px 0;
     padding: 10px;
+    background-color: #111;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Detalles del negocio */
-.details {
-    padding: 20px;
-    text-align: center;
-    background: #222;
+.carousel img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
-}
-
-.details h2 {
-    color: #FFA500; /* Naranja elegante */
-    margin-bottom: 10px;
-}
-
-.details p {
-    margin: 5px 0;
-}
-
-.map-button {
-    background-color: #FFA500;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.map-button:hover {
-    background-color: #FFD700;
-    color: #333;
 }
 
 /* Pie de página */
