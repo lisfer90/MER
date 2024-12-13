@@ -18,7 +18,7 @@ body {
 /* Barra de Navegación */
 header {
     background-color: var(--gris-claro);
-    padding: 10px 20px;
+    padding: 20px 30px;
 }
 
 .header-container {
@@ -28,20 +28,26 @@ header {
 }
 
 .header-container .logo img {
-    max-width: 250px;  /* Aumento del tamaño del logo */
+    max-width: 200px;  /* Aumento del tamaño del logo */
 }
 
-header nav ul {
+nav {
+    background-color: var(--gris-claro);
+    padding: 10px;
+}
+
+nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
-header nav a {
+nav a {
     color: var(--dorado);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* Sección de Inicio */
@@ -58,7 +64,7 @@ header nav a {
 }
 
 #inicio .bienvenida {
-    font-size: 1.5rem;  /* Ajuste del tamaño del lema */
+    font-size: 1.5rem;
     margin: 20px 0;
     color: #fff;
 }
@@ -117,9 +123,14 @@ footer {
     padding: 20px 0;
 }
 
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 footer .social-media a {
     color: var(--dorado);
-    margin: 0 10px;
     text-decoration: none;
 }
 
