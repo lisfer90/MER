@@ -24,7 +24,7 @@ header {
 }
 
 .logo img {
-    max-width: 220px; /* Incremento del tamaño del logo */
+    max-width: 300px; /* Tamaño aumentado */
     height: auto;
     object-fit: contain;
     transition: transform 0.3s;
@@ -48,8 +48,8 @@ nav ul li a {
     text-decoration: none;
     color: #f8c400;
     font-weight: bold;
-    font-size: 20px; /* Aumento del tamaño de letra */
-    padding: 8px 15px;
+    font-size: 24px; /* Tamaño de letra incrementado */
+    padding: 10px 20px; /* Más espacio para destacar */
     border-radius: 5px;
     transition: all 0.3s;
 }
