@@ -135,13 +135,17 @@ nav ul li a.active {
     background-color: #121212;
     padding: 50px 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 48px;
     color: #FFD700;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
 }
 
 .hero p {
@@ -153,25 +157,35 @@ nav ul li a.active {
 /* Información de Misión, Visión y Valores */
 .info {
     display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
+    justify-content: space-evenly;
+    margin: 50px 0;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 .info-card {
     background-color: #333;
-    padding: 20px;
+    padding: 30px;
     width: 30%;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .info-card h2 {
-    font-size: 24px;
+    font-size: 28px;
     color: #FFD700;
+    margin-bottom: 20px;
 }
 
 .info-card p {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     margin-top: 10px;
 }
@@ -234,7 +248,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .hero p {
