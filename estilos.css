@@ -1,3 +1,16 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
 /* Barra de navegación */
 header {
     background-color: #000;
@@ -21,10 +34,10 @@ header {
     transform: scale(1.1); /* Efecto sutil al pasar el cursor sobre el logo */
 }
 
-/* Navegación */
 nav ul {
     display: flex;
     list-style: none;
+    justify-content: center;
 }
 
 nav ul li {
@@ -44,5 +57,95 @@ nav ul li a {
 nav ul li a:hover {
     color: #000;
     background-color: #f8c400; /* Fondo dorado al pasar el cursor */
-    border-bottom: 2px solid #fff; /* Línea inferior adicional para efecto */
+    border-bottom: 2px solid #fff;
+}
+
+/* Sección de inicio */
+#inicio {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#inicio h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #f8c400;
+}
+
+.bienvenida {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Carrusel de imágenes */
+#carousel {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    animation: slide 30s infinite;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+}
+
+/* Botón de descarga */
+.center-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download-btn {
+    background-color: #f8c400;
+    color: #000;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ff9800;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container .social-media a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #f8c400;
+    transition: color 0.3s;
+}
+
+.footer-container .social-media a:hover {
+    color: #ff9800;
 }
