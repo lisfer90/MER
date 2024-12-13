@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ubicación - MER Soluciones Innovadoras</title>
+    <title>MER - Ubicación</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Barra de Navegación -->
@@ -19,68 +19,32 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="ubicacion.html" class="active">Ubicación</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Sección de Ubicación -->
-    <main>
-        <section id="ubicacion">
-            <h1>Encuéntranos</h1>
-            <p class="direccion">Nuestra dirección: Calle 18, Carrera 6N-52, Popayán, Cauca</p>
+    <section class="location-section">
+        <h1 class="location-title">Nuestra Ubicación</h1>
+        <div class="map-container">
+            <!-- Mapa de Google embebido -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5030175427256!2d-77.28061298558851!3d2.4445665491376854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3080f9d27ed815%3A0xc78d98226474606!2sCalle%2018n%20%236n-52%2C%20El%20Recuerdo%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses!2sco!4v1698012067734!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
-            <!-- Mapa interactivo -->
-            <div class="mapa-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15919.61476054525!2d-76.61543417417603!3d2.4464635927238125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3003793cf34741%3A0x4454dbad61d3701f!2sCalle%2018%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses-419!2sco!4v1691234567890!5m2!1ses-419!2sco"
-                    width="100%"
-                    height="450"
-                    style="border:0; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div class="mapa-boton">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=2.446463,-76.615434" target="_blank" class="btn-direcciones">
-                        <i class="fas fa-directions"></i> Obtener Indicaciones
-                    </a>
-                </div>
-            </div>
-
-            <!-- Redes Sociales -->
-            <div class="redes-sociales">
-                <h2>¡Conéctate con nosotros!</h2>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/merenga" target="_blank" class="social-link">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://www.instagram.com/merenga" target="_blank" class="social-link">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://wa.me/3103056852" target="_blank" class="social-link">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Redes Sociales -->
+        <div class="social-media">
+            <h2>Contáctanos en nuestras redes sociales:</h2>
+            <a href="https://www.facebook.com/merenga" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/merenga" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/3103056852" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <div class="social-media">
-                <a href="https://www.facebook.com/merenga" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/merenga" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/3103056852" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
             <p>&copy; 2024 MER Soluciones Innovadoras</p>
         </div>
     </footer>
