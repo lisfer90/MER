@@ -1,3 +1,75 @@
+/* Variables */
+:root {
+    --negro: #000000;
+    --gris-claro: #2f2f2f;
+    --gris-oscuro: #1c1c1c;
+    --dorado: #FFD700;
+}
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gris-oscuro);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegación */
+header {
+    background-color: var(--gris-claro);
+    padding: 20px 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .logo img {
+    max-width: 200px;  /* Aumento del tamaño del logo */
+}
+
+nav {
+    background-color: var(--gris-claro);
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra para resaltar */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--dorado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Sección de Inicio */
+#inicio {
+    padding: 20px;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: var(--dorado); /* Título dorado */
+}
+
+#inicio .bienvenida {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #fff;
+}
+
 /* Carrusel de imágenes */
 #carousel {
     position: relative;
@@ -16,4 +88,65 @@
     width: 100%;
     height: 100%; /* Asegura que la imagen ocupe todo el espacio */
     object-fit: contain; /* Cambiado de 'cover' a 'contain' */
+}
+
+
+/* Carrusel con repetición infinita */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-100%); }
+    20% { transform: translateX(-200%); }
+    30% { transform: translateX(-300%); }
+    40% { transform: translateX(-400%); }
+    50% { transform: translateX(-500%); }
+    60% { transform: translateX(-600%); }
+    70% { transform: translateX(-700%); }
+    80% { transform: translateX(-800%); }
+    90% { transform: translateX(-900%); }
+    100% { transform: translateX(0); }
+}
+
+.download-btn a {
+    color: #fff;
+    background-color: var(--dorado);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.download-btn a:hover {
+    background-color: var(--gris-claro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--gris-claro);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-media a {
+    color: var(--dorado);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer .social-media i {
+    width: 30px;
+    height: 30px;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    #personal {
+        flex-direction: column;
+    }
 }
