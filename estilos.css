@@ -40,13 +40,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px; /* Espaciado aumentado entre los elementos */
+    margin: 0 25px; /* Espaciado aumentado entre los elementos */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 22px; /* Tamaño de letra más grande */
+    font-size: 24px; /* Tamaño de letra más grande */
     text-transform: uppercase;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
@@ -69,6 +69,18 @@ nav ul li a.active {
     margin-top: 20px;
     font-style: italic;
     color: #FFD700;
+}
+
+/* Letrero de la Empresa */
+#inicio h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #FFD700, #C0C0C0); /* Degradado entre dorado y plateado */
+    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
+    color: transparent; /* Hace el texto transparente para mostrar el fondo */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Efecto 3D */
+    margin-top: 50px;
 }
 
 /* Carrusel de Imágenes */
@@ -227,5 +239,9 @@ footer p {
 
     .hero p {
         font-size: 18px;
+    }
+
+    #inicio h1 {
+        font-size: 36px;
     }
 }
