@@ -1,91 +1,114 @@
-/* Fondo y tipografía */
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #000; /* Fondo negro */
-    color: #FFD700; /* Letras doradas */
+    color: #FFD700; /* Texto dorado */
 }
 
 /* Barra de navegación */
 .navbar {
-    background-color: #333;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #333;
+    padding: 10px;
 }
 
 .navbar a {
     text-decoration: none;
     color: #FFD700;
     margin: 0 15px;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
 }
 
 .navbar a:hover, .navbar a.active {
-    color: #FFA500; /* Naranja para hover y activo */
+    color: #FFA500; /* Color naranja */
 }
 
-/* Encabezado */
-header {
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
     background-color: #222;
-    border-bottom: 2px solid #FFD700;
+    color: #FFD700;
 }
 
-header h1 {
+.hero h1 {
     font-size: 2.5em;
-    margin: 0;
 }
 
-header p {
+.hero p {
     font-size: 1.2em;
     margin-top: 10px;
 }
 
-/* Contenido principal */
-main {
-    padding: 20px;
-    text-align: center;
+/* Carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
 }
 
-.download-btn {
+.carousel .slides {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Catálogo PDF */
+.catalogo {
+    text-align: center;
+    padding: 20px;
+}
+
+.catalogo h2 {
+    margin-bottom: 10px;
+}
+
+.btn-download {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
     background-color: #FFD700;
     color: #000;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.download-btn:hover {
+.btn-download:hover {
     background-color: #FFA500;
-    color: #000;
+}
+
+/* Redes sociales */
+.social-media {
+    text-align: center;
+    padding: 20px;
 }
 
 .social-links a {
     display: inline-block;
     margin: 10px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #333;
     color: #FFD700;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
 .social-links a:hover {
     background-color: #FFA500;
-    color: #000;
 }
 
 /* Pie de página */
