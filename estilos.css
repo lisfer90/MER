@@ -1,14 +1,15 @@
 /* Variables */
 :root {
     --negro: #000000;
-    --naranja: #FF6F00;
+    --gris-claro: #2f2f2f;
+    --gris-oscuro: #1c1c1c;
     --dorado: #FFD700;
 }
 
 /* General */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--negro);
+    background-color: var(--gris-oscuro);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ body {
 
 /* Barra de Navegación */
 header {
-    background-color: var(--naranja);
+    background-color: var(--gris-claro);
     padding: 10px 20px;
 }
 
@@ -27,7 +28,7 @@ header {
 }
 
 .header-container .logo img {
-    max-width: 120px;
+    max-width: 250px;  /* Aumento del tamaño del logo */
 }
 
 header nav ul {
@@ -37,9 +38,10 @@ header nav ul {
 }
 
 header nav a {
-    color: #fff;
+    color: var(--dorado);
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* Sección de Inicio */
@@ -52,11 +54,13 @@ header nav a {
     font-family: 'Times New Roman', serif;
     font-style: italic;
     font-size: 3rem;
+    color: var(--dorado); /* Título dorado */
 }
 
 #inicio .bienvenida {
-    font-size: 1.2rem;
+    font-size: 1.5rem;  /* Ajuste del tamaño del lema */
     margin: 20px 0;
+    color: #fff;
 }
 
 #carousel {
@@ -95,4 +99,36 @@ header nav a {
     color: #fff;
     background-color: var(--dorado);
     padding: 10px 20px;
-    text-decoration: n
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn a:hover {
+    background-color: var(--gris-claro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--gris-claro);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-media a {
+    color: var(--dorado);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    #personal {
+        flex-direction: column;
+    }
+}
