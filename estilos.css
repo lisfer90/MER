@@ -49,22 +49,43 @@ header p {
     margin-top: 10px;
 }
 
-/* Carrusel */
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #111;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+/* Contenido principal */
+main {
+    padding: 20px;
+    text-align: center;
 }
 
-.carousel img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #FFD700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: #FFA500;
+    color: #000;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #FFD700;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #FFA500;
+    color: #000;
 }
 
 /* Pie de página */
