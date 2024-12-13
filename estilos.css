@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a; /* Fondo oscuro */
     color: #fff; /* Texto en blanco para contraste */
+    margin: 0;
+    padding: 0;
 }
 
 /* Barra de Navegación */
@@ -94,27 +96,6 @@ nav ul li a.active {
     height: auto;
     max-width: 100%;
     object-fit: cover;
-}
-
-.download-btn-container {
-    margin-top: 30px;
-}
-
-.download-btn {
-    background-color: #FFD700;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.download-btn a {
-    color: #121212;
-    text-decoration: none;
-}
-
-.download-btn:hover {
-    background-color: #f5b300;
 }
 
 /* Sección de Ubicación */
