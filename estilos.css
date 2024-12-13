@@ -46,7 +46,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px; /* Tamaño de letra más grande */
     text-transform: uppercase;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
@@ -84,8 +84,8 @@ nav ul li a.active {
 }
 
 .carousel-images img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Mantener las imágenes sin recorte */
+    height: auto; /* Asegura que no se distorsionen */
     display: block;
 }
 
@@ -116,7 +116,7 @@ nav ul li a.active {
     background-color: #ffa500; /* Color al pasar el ratón */
 }
 
-/* Sección de "Sobre Nosotros" */
+/* Sección "Sobre Nosotros" */
 .hero {
     background-color: #121212;
     padding: 50px 20px;
