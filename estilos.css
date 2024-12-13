@@ -79,8 +79,8 @@ nav a:hover {
 
 .carousel-images img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta las imágenes sin recortarlas, manteniendo el tamaño adecuado */
+    height: auto;  /* Asegura que las imágenes se mantengan proporcionales y no se recorten */
+    object-fit: contain;  /* Asegura que las imágenes se muestren completas */
 }
 
 /* Animación del carrusel */
@@ -130,6 +130,8 @@ footer {
 .footer-container .social-media a {
     margin: 0 15px;
     display: inline-block;
+    font-size: 1.5rem;  /* Tamaño de los iconos */
+    color: white;
     transition: opacity 0.3s ease;
 }
 
