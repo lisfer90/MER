@@ -1,141 +1,121 @@
-/* Fondo general */
+/* Variables */
+:root {
+    --negro: #000000;
+    --naranja: #FF6F00;
+    --dorado: #FFD700;
+}
+
+/* General */
 body {
-    margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #000000, #333333);
-    color: #FFFFFF;
+    background-color: var(--negro);
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #222;
-    padding: 10px 0;
-}
-
-.navbar a {
-    color: #FFD700; /* Dorado */
-    text-decoration: none;
+/* Header */
+header {
+    background-color: var(--naranja);
     padding: 10px 20px;
-    font-size: 18px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .logo img {
+    max-width: 120px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.navbar a:hover, .navbar a.active {
-    color: #C0C0C0; /* Plateado */
-    border-bottom: 2px solid #FFD700;
+/* Sección de productos */
+#catalogo {
+    padding: 20px;
+    background-color: var(--dorado);
 }
 
-/* Carrusel */
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
+#catalogo h2 {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 2rem;
 }
 
-.carousel .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+#productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.carousel .slides img {
+/* Ubicación */
+#ubicacion {
+    padding: 20px;
+}
+
+#mapa iframe {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    border: 0;
 }
 
-/* Secciones */
-.hero {
+/* Nosotros */
+#nosotros {
+    padding: 20px;
+}
+
+#informacion h3, #informacion p {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: var(--negro);
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin: 20px;
+    padding: 20px 0;
 }
 
-.hero h1 {
-    font-size: 36px;
-    color: #FFD700; /* Dorado */
-}
-
-.hero p {
-    font-size: 18px;
-    color: #C0C0C0; /* Plateado */
-}
-
-/* Sección Nosotros */
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.info-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    width: 80%;
-}
-
-.info-card h2 {
-    color: #FFD700; /* Dorado */
-    margin-bottom: 10px;
-}
-
-.info-card p, .info-card ul li {
-    color: #C0C0C0; /* Plateado */
-}
-
-/* Mapa */
-.map {
-    text-align: center;
-    padding: 20px;
-}
-
-.map h2 {
-    color: #FFD700; /* Dorado */
-}
-
-.map iframe {
-    width: 80%;
-    height: 400px;
-    border: 2px solid #FFD700;
-    border-radius: 10px;
-}
-
-/* Redes sociales */
-.social-media {
-    text-align: center;
-    padding: 20px;
-}
-
-.social-media h2 {
-    color: #FFD700; /* Dorado */
-}
-
-.social-links a {
-    margin: 10px;
-    color: #C0C0C0;
-    font-size: 24px;
+footer .social-media a {
+    color: var(--naranja);
+    margin: 0 10px;
     text-decoration: none;
 }
 
-.social-links a:hover {
-    color: #FFD700;
+/* Botones */
+button {
+    background-color: var(--dorado);
+    border: none;
+    padding: 10px 20px;
+    color: var(--negro);
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #FFFFFF;
-    font-size: 14px;
+button:hover {
+    background-color: var(--naranja);
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    #productos {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
 }
