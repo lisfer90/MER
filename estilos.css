@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro elegante */
-    color: #fff;
-}
-
-h1, h2 {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    color: #FFD700; /* Dorado para títulos */
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #fff; /* Texto en blanco para contraste */
 }
 
 /* Barra de Navegación */
@@ -67,104 +61,133 @@ nav ul li a.active {
     background-color: #FFD700;
     color: #121212;
 }
-/* Carrusel de imágenes */
-#carousel {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden;
+
+/* Sección de Bienvenida */
+.bienvenida {
+    font-size: 24px;
+    text-align: center;
     margin-top: 20px;
+    font-style: italic;
+    color: #FFD700;
+}
+
+/* Carrusel de Imágenes */
+#carousel {
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-images {
     display: flex;
-    animation: slide 30s infinite;
+    transition: transform 1s ease-in-out;
 }
 
 .carousel-images img {
-    width: 100%;
-    height: 500px; /* Asegura que todas las imágenes tengan el mismo alto */
-    object-fit: cover; /* Mantiene proporciones y llena el área */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Animación del carrusel */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(-400%); }
-}
-
-/* Sección Hero */
-.hero {
+/* Botón de Descarga */
+.download-btn-container {
     text-align: center;
-    padding: 60px 20px;
-    background-color: #1a1a1a;
+    margin-top: 20px;
+}
+
+.download-btn {
+    background-color: #FFD700;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn a {
+    color: #121212;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #ffa500; /* Color al pasar el ratón */
+}
+
+/* Sección de "Sobre Nosotros" */
+.hero {
+    background-color: #121212;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 36px;
+    color: #FFD700;
+    font-weight: bold;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fff;
 }
 
-/* Sección de Información */
+/* Información de Misión, Visión y Valores */
 .info {
     display: flex;
     justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #121212;
+    margin: 40px 0;
 }
 
 .info-card {
     background-color: #333;
-    border-radius: 8px;
     padding: 20px;
     width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .info-card h2 {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 24px;
+    color: #FFD700;
 }
 
-.info-card p, .info-card ul {
-    font-size: 1rem;
-    color: #ccc;
+.info-card p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
 }
 
 .info-card ul {
-    list-style-type: none;
+    list-style: none;
+    margin-top: 10px;
 }
 
 .info-card ul li {
-    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
+    background-color: #121212;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-media {
+    margin-bottom: 10px;
 }
 
 footer .social-media a {
@@ -176,4 +199,30 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #FFD700;
+}
+
+footer p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Respuesta a tamaños de pantalla (Responsividad) */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
 }
