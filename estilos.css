@@ -398,4 +398,126 @@ footer p {
     text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
 }
+/* Sección del Portafolio */
+.portafolio-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.portafolio-title {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.portafolio-intro {
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Categorías de Servicios */
+.service-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.service-category {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-category h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.service-category img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-category p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Galería de Proyectos */
+.projects-gallery {
+    margin-top: 40px;
+}
+
+.projects-gallery h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.project {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Testimonios */
+.client-testimonials {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.client-testimonials p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.client-testimonials i {
+    color: #f39c12;
+}
+
+/* Botón de contacto */
+.contact-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-contact {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-contact:hover {
+    background-color: #e67e22;
+    transition: background-color 0.3s ease;
+}
 
