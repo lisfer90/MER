@@ -385,4 +385,17 @@ footer p {
     font-size: 16px;
     color: #fff;
 }
+/* Letrero con la dirección */
+.location-sign {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.location-sign p {
+    font-size: 28px; /* Tamaño grande pero legible */
+    font-weight: bold;
+    color: #FFD700; /* Dorado */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+}
 
